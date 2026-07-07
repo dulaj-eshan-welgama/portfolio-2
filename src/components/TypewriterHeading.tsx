@@ -7,7 +7,7 @@ const TypewriterHeading = () => {
     const [typingSpeed, setTypingSpeed] = useState(150);
 
     const texts = [
-        "I'm Julach Earzan.",
+        "I'm Dulaj Eshan Welgama.",
         "I'm Software Engineer."
     ];
 

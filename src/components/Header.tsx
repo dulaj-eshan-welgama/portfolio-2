@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from 'react'
-import { Link } from '@tanstack/react-router'
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
@@ -13,7 +15,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   function openResumeAssistant() {
-    import('./ResumeAssistant').then((mod) => {
+    import('@/lib/resume-assistant-store').then((mod) => {
       mod.showResumeAssistant.setState(() => true)
     })
   }
@@ -21,7 +23,7 @@ export default function Header() {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-auto">
       <div className="glass-nav rounded-full px-8 py-3 flex items-center gap-10 shadow-2xl">
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="w-6 h-6 rounded-lg border border-white rotate-45 group-hover:rotate-180 transition-transform duration-700">
             <img
               src="JEIcon.webp"

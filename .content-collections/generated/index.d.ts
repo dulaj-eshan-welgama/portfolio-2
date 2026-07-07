@@ -1,4 +1,4 @@
-import configuration from "../../content-collections.config.ts";
+import configuration from "../../content-collections.ts";
 import { GetTypeByName } from "@content-collections/core";
 
 export type Job = GetTypeByName<typeof configuration, "jobs">;

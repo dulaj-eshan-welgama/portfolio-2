@@ -1,22 +1,19 @@
+'use client'
+
 import { useState, useMemo, useEffect } from 'react'
-import { createFileRoute } from '@tanstack/react-router'
-import { allJobs, allEducations } from 'content-collections'
-import { Card, CardContent } from '#/components/ui/card'
-import { Badge } from '#/components/ui/badge'
+import { allJobs, allEducations } from "content-collections"
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import { GraduationCap, Mail, Github, Linkedin, FileDown } from 'lucide-react'
 import { marked } from 'marked'
-import ResumeAssistant from '#/components/ResumeAssistant'
-import Galaxy from '../components/Galaxy'
-import CountUp from '../components/CountUp'
-import Header from '../components/Header'
-import SlantedMarquee from '../components/SlantedMarquee'
-import ProjectSlider from '../components/ProjectSlider'
-import TypewriterHeading from '../components/TypewriterHeading'
-import FallingCapsules from '../components/FallingCapsules'
-
-export const Route = createFileRoute('/')({
-  component: App,
-})
+import ResumeAssistant from '@/components/ResumeAssistant'
+import Galaxy from '@/components/Galaxy'
+import CountUp from '@/components/CountUp'
+import Header from '@/components/Header'
+import SlantedMarquee from '@/components/SlantedMarquee'
+import ProjectSlider from '@/components/ProjectSlider'
+import TypewriterHeading from '@/components/TypewriterHeading'
+import FallingCapsules from '@/components/FallingCapsules'
 
 const GALAXY_CONFIG = {
   density: 2,
@@ -30,7 +27,7 @@ const GALAXY_CONFIG = {
   repulsionStrength: 2.5,
 }
 
-function App() {
+export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true)
   const focal = useMemo(() => [0.5, 0.5] as [number, number], [])
   const rotation = useMemo(() => [1.0, 0.0] as [number, number], [])
@@ -144,7 +141,7 @@ function App() {
                   </a>
                   <div className="flex items-center gap-4 sm:gap-6">
                     <a
-                      href="https://github.com/julach-earzan"
+                      href="https://github.com/dulaj-eshan-welgama/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#536872] hover:text-[#a8e6cf] transition-colors"
@@ -152,7 +149,7 @@ function App() {
                       <Github className="w-5 h-5 sm:w-6 sm:h-6" />
                     </a>
                     <a
-                      href="https://linkedin.com/in/julach-earzan"
+                      href="https://www.linkedin.com/in/dulaj-eshan-welgama/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#536872] hover:text-[#a8e6cf] transition-colors"
@@ -160,7 +157,7 @@ function App() {
                       <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                     </a>
                     <a
-                      href="mailto:jesrilanka@gmail.com"
+                      href="mailto:dulajeshan990214@gmail.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#536872] hover:text-[#a8e6cf] transition-colors"
@@ -178,7 +175,7 @@ function App() {
                 <div className="absolute -inset-2 sm:-inset-4 bg-white/5 blur-2xl rounded-full" />
                 <img
                   src="/hero1.webp"
-                  alt="Julach Earzan Profile"
+                  alt="Dulaj Eshan Welgama Profile"
                   className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[380px] xl:max-w-[420px] aspect-square object-cover border border-white/10 rounded-2xl shadow-2xl animate-float"
                 />
               </div>
@@ -265,7 +262,7 @@ function App() {
                 <div className="absolute -inset-4 sm:-inset-6 md:-inset-10 bg-white/5 blur-3xl rounded-2xl" />
                 <img
                   src="hero2.webp"
-                  alt="Julach Earzan About"
+                  alt="Dulaj Eshan Welgama About"
                   className="relative w-full aspect-[4/5] sm:aspect-square object-cover border border-white/10 rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
                 />
               </div>
@@ -362,11 +359,11 @@ function App() {
                   image: '/saltalbahar.webp',
                 },
                 {
-                  title: 'Weather App Website',
-                  description: 'React app with Redux and live weather API.',
-                  tags: ['ReactJS', 'Redux', 'Tailwind', 'Weather API'],
-                  link: 'https://julach-earzan-weather-app.netlify.app/get-start',
-                  image: '/weatherapp.webp',
+                  title: '26 North Travel Website',
+                  description: 'Travel agency website',
+                  tags: ['Next.js', 'Tailwind'],
+                  link: 'https://26ntravel.com/',
+                  image: '/26north.webp',
                 },
               ]}
             />
@@ -501,21 +498,21 @@ function App() {
               </h2>
               <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12">
                 <a
-                  href="mailto:jesrilanka@gmail.com"
+                  href="mailto:dulajeshan990214@gmail.com"
                   target="_blank"
                   className="text-[#ffc0cb] hover:text-[#a8e6cf] transition-all flex items-center gap-2 text-sm sm:text-base"
                 >
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5" /> Email
                 </a>
                 <a
-                  href="https://linkedin.com/in/julach-earzan"
+                  href="https://www.linkedin.com/in/dulaj-eshan-welgama/"
                   target="_blank"
                   className="text-[#c0c2ce] hover:text-[#a8e6cf] transition-all flex items-center gap-2 text-sm sm:text-base"
                 >
                   <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" /> LinkedIn
                 </a>
                 <a
-                  href="https://github.com/julach-earzan"
+                  href="https://github.com/dulaj-eshan-welgama/"
                   target="_blank"
                   className="text-[#ffcc5c] hover:text-[#a8e6cf] transition-all flex items-center gap-2 text-sm sm:text-base"
                 >
@@ -523,7 +520,7 @@ function App() {
                 </a>
               </div>
               <p className="text-[#536872] text-xs sm:text-sm font-pixel uppercase tracking-widest">
-                © 2026 All rights reserved to Julach Earzan
+                © 2026 All rights reserved to Dulaj Eshan Welgama
               </p>
             </div>
           </footer>

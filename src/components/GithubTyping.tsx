@@ -4,7 +4,7 @@ const GithubTyping = () => {
     const [text, setText] = useState('');
     const [phase, setPhase] = useState<'typing1' | 'typing2' | 'done'>('typing1');
 
-    const line1 = "I'm Julach Earzan.";
+    const line1 = "I'm Dulaj Eshan Welgama.";
     const line2 = "I'm Software Engineer";
 
     useEffect(() => {

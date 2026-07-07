@@ -1,6 +1,8 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import { Send, X, MessageCircle } from 'lucide-react'
-import { Store } from '@tanstack/store'
+import { showResumeAssistant } from '@/lib/resume-assistant-store'
 
 const WEBHOOK_URL =
   'https://julach-earzan.app.n8n.cloud/webhook/166a2a41-e816-429e-9a74-90e81078298d'
@@ -15,11 +17,8 @@ interface Message {
 const GREETING: Message = {
   id: 0,
   role: 'me',
-  text: "Hey there! 👋 I'm Julach Earzan — a Software Engineer. Feel free to leave me a message and I'll get back to you by email. You can also reach me directly at jesrilanka@gmail.com.",
+  text: "Hey there! 👋 I'm Dulaj Eshan Welgama — a Software Engineer. Feel free to leave me a message and I'll get back to you by email. You can also reach me directly at jesrilanka@gmail.com.",
 }
-
-// Export store so the "Hire Me" header button can open this
-export const showResumeAssistant = new Store(false)
 
 export default function ResumeAssistant() {
   const [isOpen, setIsOpen] = useState(false)
@@ -113,7 +112,7 @@ export default function ResumeAssistant() {
             </div>
             <div className="min-w-0">
               <p className="font-bold text-slate-100 text-sm leading-tight truncate">
-                Julach Earzan
+                Dulaj Eshan Welgama
               </p>
               <p className="text-[11px] text-[#a8e6cf]">Software Engineer · Let's talk</p>
             </div>

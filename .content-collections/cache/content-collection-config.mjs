@@ -1,4 +1,4 @@
-// content-collections.config.ts
+// content-collections.ts
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { z } from "zod";
 var jobs = defineCollection({
@@ -29,9 +29,9 @@ var education = defineCollection({
     content: z.string()
   })
 });
-var content_collections_config_default = defineConfig({
+var content_collections_default = defineConfig({
   collections: [jobs, education]
 });
 export {
-  content_collections_config_default as default
+  content_collections_default as default
 };

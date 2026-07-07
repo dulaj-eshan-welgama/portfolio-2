@@ -78,6 +78,15 @@ web_modules/
 .next
 out
 
+# Content collections generated output
+.content-collections
+
+# TanStack / Vite / Nitro artifacts
+.output
+.nitro
+dist
+build
+
 # Nuxt.js build / generate output
 .nuxt
 dist
